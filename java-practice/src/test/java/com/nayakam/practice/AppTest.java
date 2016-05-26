@@ -1,4 +1,4 @@
-package com.practice;
+package com.nayakam.practice;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
