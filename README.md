@@ -1,4 +1,5 @@
-# JavaPractice
-Java Practice
+### Java Examples
 
-Testing Github repo and Combine java test class here 
+ * Testing Github repository
+ * Sample interview questions
+ * Coded these example to learn java and prepare for SCJP
