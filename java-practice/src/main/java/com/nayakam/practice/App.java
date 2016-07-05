@@ -1,5 +1,6 @@
 package com.nayakam.practice;
 
+import java.io.*;
 import java.util.*;
 
 /**
@@ -9,7 +10,7 @@ public class App
 {
     public static void main(String[] args)
     {
-       Properties p  = System.getProperties();
+        Properties p = System.getProperties();
         System.out.println("Properties stringPropertyNames :" + p.stringPropertyNames());
         System.out.println("Hello World!");
         System.out.printf("Right now it is %tr on " + "%<tA, %<tB %<te, %<tY.%n", Calendar.getInstance());
@@ -74,5 +75,46 @@ public class App
         System.out.println("hashtable get:" + hashmap.get(null));
         //java.lang.NullPointerException
         //hashtable.put(null, "test");
+
+        ArrayList alist = new ArrayList<Integer>();
+        alist.add(4);
+        alist.add(5);
+        alist.add("5");
+        alist.add("A");
+        for (Object t : alist)
+        {
+            System.out.println(t.equals(5) + ", t:" + t + " , " + alist.getClass());
+            //Integer a = Integer.valueOf(t.toString());
+            //Integer b = (Integer) t;
+
+        }
+
+        Vector<String> e = new Vector<String>();
+        Vector<Integer> ei = new Vector<Integer>();
+        Vector<Object> o = new Vector<Object>();
+        // o.add(1);
+        System.out.println(e.getClass() + ", " + ei.getClass() + ", " + (e.getClass() == ei.getClass()) + "," + e.equals(o));
+
+        File f =   new File("");
+        f.delete();
+        System.out.println( " file : " + f.getName());
+        try
+        {
+            Writer w = new BufferedWriter(new FileWriter("File.TXT"));
+           // f.createNewFile();
+
+        }
+        catch (IOException e1)
+        {
+            e1.printStackTrace();
+        }
+
+
+    }
+
+    public void main(String arg)
+    {
+        Locale.getAvailableLocales();
+
     }
 }

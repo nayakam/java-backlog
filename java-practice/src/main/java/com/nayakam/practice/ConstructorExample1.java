@@ -11,9 +11,17 @@ public class ConstructorExample1 extends B
 
     }
 
+    int getId(){
+        return  i;
+    }
+
     public static void main(String[] args)
     {
         System.out.println(Thread.currentThread().getName() + " - " + new ConstructorExample1().i);
+        B t =  new ConstructorExample1();
+        t.i = 5;
+       // System.out.println(t.getId());
+
     }
 }
 
@@ -24,6 +32,9 @@ class A
     A()
     {
         System.out.println(A.class.getSimpleName() + " - int :" + i);
+    }
+    private int getId(){
+        return  i;
     }
 }
 

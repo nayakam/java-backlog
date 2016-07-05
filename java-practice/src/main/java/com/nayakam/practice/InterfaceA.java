@@ -1,6 +1,7 @@
 package com.nayakam.practice;
 
 interface InterfaceA {
+    static final String test = "t";
       void testMethod();
   }
   interface InterfaceB {
@@ -9,11 +10,6 @@ interface InterfaceA {
   interface TestInter extends InterfaceA, InterfaceB {
       // methods of TestInter.  
   }
-  class TestClass implements TestInter {@
-      Override
-      public void testMethod() {
-          //you see here  
-          //method from A and B  
-          //only one method overridden.    
-      }
+abstract class  TestClass implements TestInter {
+
   }
