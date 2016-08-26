@@ -1,15 +1,17 @@
 package com.nayakam.practice;
 
-import java.io.*;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.Writer;
 import java.util.*;
 
 /**
  * Hello world!
  */
-public class App
-{
-    public static void main(String[] args)
-    {
+public class App {
+    public static void main(String[] args) {
         Properties p = System.getProperties();
         System.out.println("Properties stringPropertyNames :" + p.stringPropertyNames());
         System.out.println("Hello World!");
@@ -45,7 +47,7 @@ public class App
         Set hashSet = new HashSet();
         hashSet.add(null);
 
-        List<Integer> list = new ArrayList<>();
+        List<Integer> list = new ArrayList<Integer>();
         list.add(2);
         list.add(1);
         list.add(4);
@@ -81,8 +83,7 @@ public class App
         alist.add(5);
         alist.add("5");
         alist.add("A");
-        for (Object t : alist)
-        {
+        for (Object t : alist) {
             System.out.println(t.equals(5) + ", t:" + t + " , " + alist.getClass());
             //Integer a = Integer.valueOf(t.toString());
             //Integer b = (Integer) t;
@@ -95,25 +96,30 @@ public class App
         // o.add(1);
         System.out.println(e.getClass() + ", " + ei.getClass() + ", " + (e.getClass() == ei.getClass()) + "," + e.equals(o));
 
-        File f =   new File("");
+        File f = new File("");
         f.delete();
-        System.out.println( " file : " + f.getName());
-        try
-        {
+        System.out.println(" file : " + f.getName());
+        try {
             Writer w = new BufferedWriter(new FileWriter("File.TXT"));
-           // f.createNewFile();
+            // f.createNewFile();
 
-        }
-        catch (IOException e1)
-        {
+        } catch (IOException e1) {
             e1.printStackTrace();
         }
 
+        Integer integerValue = new Integer(5);
+        System.out.println(integerValue.getClass());
+        System.out.println(Integer.class.isAssignableFrom(integerValue.getClass()));
+        System.out.println(String.class.isAssignableFrom(integerValue.getClass()));
+        System.out.println(Object.class.isAssignableFrom(integerValue.getClass()));
+
+        System.out.println(integerValue.getClass().isAssignableFrom(Integer.class));
+        System.out.println(integerValue.getClass().isAssignableFrom(String.class));
+        System.out.println(integerValue.getClass().isAssignableFrom(Object.class));
 
     }
 
-    public void main(String arg)
-    {
+    public void main(String arg) {
         Locale.getAvailableLocales();
 
     }

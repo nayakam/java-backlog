@@ -33,7 +33,7 @@ public class ReverseStringUtil {
     }
 
     public static String reverseStringUsingQueue(String input) {
-        Deque<Character> characterQueue = new ArrayDeque<>(input.length());
+        Deque<Character> characterQueue = new ArrayDeque<Character>(input.length());
 
         for (char c : input.toCharArray()) {
             characterQueue.addLast(c);
