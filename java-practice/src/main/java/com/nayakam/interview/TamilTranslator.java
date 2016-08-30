@@ -13,11 +13,11 @@ import java.util.Map;
  * public class TamilTranslator {
  *      final Map<String, String> map;
  *
- *      public GermanTranslator() {
+ *      public TamilTranslator() {
  *
  *      }
  *
- *      public GermanTranslator(Map<String, String> map) {
+ *      public TamilTranslator(Map<String, String> map) {
  *              this.map = map;
  *      }
  *

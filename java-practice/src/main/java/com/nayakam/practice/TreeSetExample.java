@@ -4,11 +4,9 @@ import java.util.Iterator;
 import java.util.TreeMap;
 import java.util.TreeSet;
 
-public class TreeSetExample
-{
+public class TreeSetExample {
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         System.out.println("Tree Set Example!\n");
         TreeSet<Integer> tree = new TreeSet<Integer>();
         tree.add(12);
@@ -24,19 +22,15 @@ public class TreeSetExample
         System.out.print("Tree set data: ");
 
         // Displaying the Tree set data
-        while (iterator.hasNext())
-        {
+        while (iterator.hasNext()) {
             System.out.print(iterator.next() + " ");
         }
         System.out.println();
 
         // Check empty or not
-        if (tree.isEmpty())
-        {
+        if (tree.isEmpty()) {
             System.out.print("Tree Set is empty.");
-        }
-        else
-        {
+        } else {
             System.out.println("Tree Set size: " + tree.size());
         }
 
@@ -71,12 +65,9 @@ public class TreeSetExample
 
         // Remove all
         tree.clear();
-        if (tree.isEmpty())
-        {
+        if (tree.isEmpty()) {
             System.out.print("Tree Set is empty.");
-        }
-        else
-        {
+        } else {
             System.out.println("Tree Set size: " + tree.size());
         }
 

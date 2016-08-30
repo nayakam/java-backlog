@@ -2,16 +2,11 @@ package com.nayakam.practice;
 
 import java.util.Random;
 
-/**
- * Created by tsaba on 26/06/2016.
- */
-public class Outter
-{
-   private int num = 2399;
+public class Outter {
+    private int num = 2399;
     static int numStatic = 5000;
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         Outter outter = new Outter();
         Outter.Inner inner = outter.new Inner();
         inner.innerMethod();
@@ -19,17 +14,13 @@ public class Outter
         System.out.println("outter.num:" + outter.num);
         Random r = new Random();
         System.out.println(r.nextInt(7));
-        System.out.println(5/0);
-
-
+        System.out.println(5 / 0);
     }
 
-    class Inner
-    {
-       private int num = 9922;
+    class Inner {
+        private int num = 9922;
 
-        void innerMethod()
-        {
+        void innerMethod() {
             System.out.println("num:" + num);
             System.out.println("this.num" + this.num);
             System.out.println("Outter.this.num" + Outter.this.num);

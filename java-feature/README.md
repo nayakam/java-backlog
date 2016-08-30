@@ -7,7 +7,8 @@
 #####Language changes:
 * Lambda expressions - funtional programming (JSR 335, includes method handles)
 * Annotations on Java types
-* Continuation of Project Coin (small language improvements)
+* Repeating annotations.
+* Unsigned integer arithmetic
 
 #####Library changes:
 * Improved Date and Time API

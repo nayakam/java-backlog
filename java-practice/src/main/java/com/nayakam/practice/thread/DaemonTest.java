@@ -1,24 +1,19 @@
-package com.nayakam.practice;
+package com.nayakam.practice.thread;
 
 /**
  * http://docs.oracle.com/javase/6/docs/api/java/lang/Thread.html
- *http://stackoverflow.com/questions/2213340/what-is-daemon-thread-in-java
+ * http://stackoverflow.com/questions/2213340/what-is-daemon-thread-in-java
  * http://stackoverflow.com/questions/7067578/when-are-daemon-threads-useful
  */
-public class DaemonTest
-{
+public class DaemonTest {
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         WorkerThread workerThread = new WorkerThread();
         workerThread.start();
 
-        try
-        {
+        try {
             Thread.sleep(7500);
-        }
-        catch (InterruptedException e)
-        {
+        } catch (InterruptedException e) {
             // handle here exception
         }
 
@@ -28,11 +23,9 @@ public class DaemonTest
 
 }
 
-class WorkerThread extends Thread
-{
+class WorkerThread extends Thread {
 
-    public WorkerThread()
-    {
+    public WorkerThread() {
         // When false, (i.e. when it's a user thread),
         // the Worker thread continues to run.
         // When true, (i.e. when it's a daemon thread),
@@ -42,24 +35,17 @@ class WorkerThread extends Thread
         setDaemon(false);
     }
 
-    public void run()
-    {
+    public void run() {
         int count = 0;
 
-        while (true)
-        {
+        while (true) {
             System.out.println("Worker Thread run count : " + count + ", isDaemon :" + this.isDaemon() + ",this.getName(): " + this.getName());
 
-            try
-            {
+            try {
                 sleep(5000);
-            }
-            catch (InterruptedException e)
-            {
+            } catch (InterruptedException e) {
                 throw new RuntimeException(e);
-            }
-            finally
-            {
+            } finally {
                 System.out.println("Worker Thread Finally run count : " + count++ + ",this.getName(): " + this.getName());
             }
         }
