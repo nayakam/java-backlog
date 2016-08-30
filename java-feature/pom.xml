@@ -11,6 +11,8 @@
 
     <groupId>java-backlog</groupId>
     <artifactId>java-feature</artifactId>
-
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
+    <name>Java Feature</name>
 
 </project>

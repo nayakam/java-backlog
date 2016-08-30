@@ -7,7 +7,7 @@
 #####Language changes:
 * Lambda expressions - funtional programming (JSR 335, includes method handles)
 * Annotations on Java types
-* Repeating annotations.
+* Repeating annotations
 * Unsigned integer arithmetic
 
 #####Library changes:
