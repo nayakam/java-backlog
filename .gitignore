@@ -217,4 +217,5 @@ pip-log.txt
 #Mr Developer
 .mr.developer.cfg
 .idea/workspace.xml
-java-knowledge-test.iml
+*.iml
+*/target/*
