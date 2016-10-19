@@ -1,0 +1,9 @@
+{
+  "name" : "scarlet Ibis",
+  "age" : null,
+  "friend" : {
+    "name" : "Test Friend"
+  },
+  "sound" : "eee",
+  "habitat" : "water"
+}

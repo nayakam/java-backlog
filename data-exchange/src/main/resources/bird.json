@@ -1,0 +1,9 @@
+{
+  "name" : null,
+  "sound" : "eee",
+  "habitat" : "water",
+  "age" : null,
+  "wing" : {
+    "wingId" : "1"
+  }
+}

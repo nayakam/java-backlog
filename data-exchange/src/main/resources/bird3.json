@@ -1,0 +1,16 @@
+{
+  "name" : null,
+  "sound" : "eee",
+  "habitat" : "water",
+  "age" : null,
+  "wing" : "1",
+  "nests" : [ {
+    "nestId" : "1",
+    "nestLocation" : "One",
+    "noOfBed" : 1
+  }, {
+    "nestId" : "2",
+    "nestLocation" : "Two",
+    "noOfBed" : 2
+  } ]
+}

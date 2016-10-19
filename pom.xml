@@ -12,6 +12,7 @@
     <modules>
         <module>java-practice</module>
         <module>java-feature</module>
+        <module>data-exchange</module>
     </modules>
 
     <build>
