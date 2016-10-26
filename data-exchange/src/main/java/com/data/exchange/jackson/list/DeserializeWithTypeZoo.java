@@ -6,10 +6,10 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.IOException;
 
-public class DeserializeZoo {
+public class DeserializeWithTypeZoo {
 
     public static void main(String[] args) throws JsonParseException, JsonMappingException, IOException {
-        String json = "{\"name\":\"Sydney Zoo\",\"city\":\"Sydney\"," + "\"animals\":[{\"name\":\"Manny\"},{\"name\":\"Simba\"}]}";
+        String json = "{\"name\":\"Sydney Zoo\",\"city\":\"Sydney\"," + "\"animals\":[{ \"@class\":\"com.data.exchange.jackson.list.Elephant\",\"name\":\"Manny\"},{\"@class\":\"com.data.exchange.jackson.list.Lion\",\"name\":\"Simba\"}]}";
         ObjectMapper mapper = new ObjectMapper();
         Zoo zoo = mapper.readValue(json, Zoo.class);
         System.out.println(zoo);

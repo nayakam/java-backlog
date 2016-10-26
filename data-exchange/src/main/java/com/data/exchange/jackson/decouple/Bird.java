@@ -1,4 +1,4 @@
-package com.data.exchange.jackson.example;
+package com.data.exchange.jackson.decouple;
 
 import java.util.List;
 

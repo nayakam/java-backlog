@@ -1,18 +1,24 @@
-package com.data.exchange.jackson.example;
+package com.data.exchange.jackson.decouple;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 public abstract class BirdMixIn {
-    //    com.data.exchange.jackson.example.BirdMixIn(@JsonProperty("name") String name) {
-//    }
+    BirdMixIn(@JsonProperty("name") String name) {
+    }
+
     @JsonSerialize(using = OptimisedSerialiser.class)
     abstract Wing getWing();
+
 //    @JsonProperty("sound")
 //    abstract String getSound();
 //
 //    @JsonProperty("habitat")
 //    abstract String getHabitat();
-
+//
 //    @JsonProperty("friend")
 //    abstract String getFriend();
+//
+//    @JsonProperty("nests")
+//    abstract String getNestTests();
 }

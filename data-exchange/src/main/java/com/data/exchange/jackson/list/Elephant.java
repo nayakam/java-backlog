@@ -7,12 +7,12 @@ class Elephant extends Animal {
 
     @JsonCreator
     public Elephant(@JsonProperty("name") String name) {
-        super.name = name;
+        this.setName(name);
     }
 
     @Override
     public String toString() {
-        return "com.data.exchange.jackson.list.Elephant : " + name;
+        return "Elephant : " + this.getName();
     }
 }
  

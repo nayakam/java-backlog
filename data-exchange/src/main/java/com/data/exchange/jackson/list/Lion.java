@@ -6,11 +6,11 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 class Lion extends Animal {
     @JsonCreator
     public Lion(@JsonProperty("name") String name) {
-        this.name = name;
+        this.setName(name);
     }
- 
+
     @Override
     public String toString() {
-        return "com.data.exchange.jackson.list.Lion: " + name;
+        return "Lion: " + this.getName();
     }
 }

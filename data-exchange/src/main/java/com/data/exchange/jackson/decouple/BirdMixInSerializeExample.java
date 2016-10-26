@@ -1,4 +1,4 @@
-package com.data.exchange.jackson.example;
+package com.data.exchange.jackson.decouple;
 
 import com.fasterxml.jackson.core.JsonGenerationException;
 import com.fasterxml.jackson.databind.JsonMappingException;
@@ -50,7 +50,11 @@ public class BirdMixInSerializeExample {
                 "\"habitat\" : \"water\"}";
 
         ObjectMapper deObjectMapper = new ObjectMapper();
+        System.out.println("mixInCount:" + deObjectMapper.getDeserializationConfig().mixInCount());
+
         deObjectMapper.addMixIn(Bird.class, BirdMixIn.class);
+        System.out.println("mixInCount:" + deObjectMapper.getDeserializationConfig().mixInCount());
+        System.out.println(deObjectMapper.getDeserializationConfig().findMixInClassFor(Bird.class));
         Bird deBird = mapper.readValue(json, Bird.class);
         System.out.println(deBird);
     }

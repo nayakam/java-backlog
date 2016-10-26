@@ -12,13 +12,17 @@ import java.util.List;
 public class SerializeAnimals {
     public static void main(String[] args) throws JsonGenerationException, JsonMappingException, IOException {
         List<Animal> animals = new ArrayList<>();
+
         Lion lion = new Lion("Samba");
-        Elephant elephant = new Elephant("Manny");
         animals.add(lion);
+
+        Elephant elephant = new Elephant("Manny");
         animals.add(elephant);
+
         ObjectMapper mapper = new ObjectMapper();
+        mapper.enableDefaultTyping();
         mapper.writerWithType(new TypeReference<Object>() {
         }).writeValue(System.out, animals);
-        // mapper.writeValue(System.out, animals);
+        //mapper.writeValue(System.out, animals);
     }
 } 

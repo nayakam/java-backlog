@@ -11,7 +11,7 @@ import java.io.IOException;
 
 public class SerializeZoo {
     public static void main(String[] args) throws JsonGenerationException, JsonMappingException, IOException {
-        Zoo zoo = new Zoo("London com.data.exchange.jackson.list.Zoo", "London");
+        Zoo zoo = new Zoo("Sydney Zoo", "Sydney");
         Lion lion = new Lion("Simba");
         Elephant elephant = new Elephant("Manny");
         zoo.addAnimal(elephant).add(lion);
