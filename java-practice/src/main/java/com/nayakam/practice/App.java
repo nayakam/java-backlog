@@ -128,6 +128,11 @@ public class App {
         System.out.println(integerValue.getClass().isAssignableFrom(Integer.class));
         System.out.println(integerValue.getClass().isAssignableFrom(String.class));
         System.out.println(integerValue.getClass().isAssignableFrom(Object.class));
+        Integer ii = new Integer(0b0110_0001 & 0b1110_0000);
+        System.out.println( 0 ^ 1);
+        System.out.println( 1 ^ 1);
+        System.out.println( 0 ^ 0);
+        System.out.println(0b0000_0001 << 4 );
 
     }
 
