@@ -4,13 +4,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-/**
- * <p>Title: </p>
- *
- * <p>Description: Created by tsaba on 22/11/2016.</p>
- *
- * @version 1.0
- */
 public class WinnerFactor {
 
     public static void main(String[] args) {

@@ -16,7 +16,6 @@ public class ThreadExample1 extends Thread
     private void method()
     {
         System.out.print(Thread.currentThread().getName());
-
     }
 
     /**
