@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:cw="http://itree.com.au/checkworks"
+           targetNamespace="http://itree.com.au/checkworks" elementFormDefault="qualified"
+           attributeFormDefault="unqualified">
+
+    <xs:complexType name="TextResponseType">
+        <xs:sequence>
+            <xs:element name="value" type="xs:string"/>
+        </xs:sequence>
+        <xs:attribute name="mandatory" type="xs:boolean"/>
+    </xs:complexType>
+
+    <xs:complexType name="DatetimeResponseType">
+        <xs:sequence>
+            <xs:element name="value" type="xs:string"/>
+        </xs:sequence>
+        <xs:attribute name="mandatory" type="xs:boolean"/>
+        <xs:attribute name="defaultToCurrent" type="xs:boolean"/>
+    </xs:complexType>
+
+    <xs:complexType name="LocationResponseType">
+        <xs:sequence>
+            <xs:element name="value" type="xs:string"/>
+        </xs:sequence>
+        <xs:attribute name="mandatory" type="xs:boolean"/>
+        <xs:attribute name="defaultToCurrent" type="xs:boolean"/>
+    </xs:complexType>
+
+    <xs:complexType name="ChoiceResponseType">
+        <xs:sequence>
+            <xs:element name="choices">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="choice" type="xs:string" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="value" type="xs:string"/>
+        </xs:sequence>
+        <xs:attribute name="mandatory" type="xs:boolean"/>
+        <xs:attribute name="allowMultiple" type="xs:boolean"/>
+    </xs:complexType>
+
+    <xs:complexType name="NumberResponseType">
+        <xs:sequence>
+            <xs:element name="value" type="xs:string"/>
+        </xs:sequence>
+        <xs:attribute name="mandatory" type="xs:boolean"/>
+    </xs:complexType>
+
+    <xs:complexType name="QuestionType">
+        <xs:sequence>
+            <xs:element name="text" type="xs:string"/>
+            <xs:element name="responses">
+                <xs:complexType>
+                    <xs:choice maxOccurs="unbounded">
+                        <xs:element name="text-response" type="cw:TextResponseType"/>
+                        <xs:element name="datetime-response" type="cw:DatetimeResponseType"/>
+                        <xs:element name="location-response" type="cw:LocationResponseType"/>
+                        <xs:element name="choice-response" type="cw:ChoiceResponseType"/>
+                        <xs:element name="number-response" type="cw:NumberResponseType"/>
+                    </xs:choice>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="sequence" type="xs:int"/>
+    </xs:complexType>
+
+    <xs:complexType name="SectionType">
+        <xs:sequence>
+            <xs:element name="title" type="xs:string"/>
+            <xs:element name="explanatory-text" type="xs:string"/>
+            <xs:element name="questions">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="question" type="cw:QuestionType" minOccurs="0" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:string"/>
+        <xs:attribute name="sequence" type="xs:int"/>
+        <xs:attribute name="showTitle" type="xs:boolean"/>
+    </xs:complexType>
+
+    <xs:complexType name="ChecklistType">
+        <xs:all>
+            <xs:element name="response-email">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="email-to" type="xs:string"/>
+                        <xs:element name="subject" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="title" type="xs:string"/>
+            <xs:element name="sections">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="section" type="cw:SectionType" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:all>
+        <xs:attribute name="id" type="xs:string"/>
+        <xs:attribute name="version" type="xs:string"/>
+    </xs:complexType>
+
+    <xs:element name="checklist" type="cw:ChecklistType">
+    </xs:element>
+</xs:schema>
