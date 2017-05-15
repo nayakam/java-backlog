@@ -1,0 +1,69 @@
+<checklist id="d5ef495e-ee4d-412d-8bfe-b501a13ffd1f" version="0.3" xmlns="http://itree.com.au/checkworks">
+	<response-email>
+		<email-to>regwx@itree.com.au</email-to>
+		<subject>MPI Non-Commercial Activity Log Checklist</subject>
+	</response-email>
+	<title>MPI Non-Commercial Activity Log</title>
+	<sections>
+		<section id="19b0923c-0fe2-4579-8471-ccb3a525eca3" sequence="0" showTitle="true">
+			<title>Inspection Details</title>
+			<explanatory-text />
+			<questions>
+				<question sequence="0">
+					<text>Name</text>
+					<responses>
+						<text-response mandatory="true">
+							<value />
+						</text-response>
+					</responses>
+				</question>
+				<question sequence="1">
+					<text>Date</text>
+					<responses>
+						<datetime-response defaultToCurrent="true" mandatory="true">
+							<value />
+						</datetime-response>
+					</responses>
+				</question>
+				<question sequence="2">
+					<text>Location</text>
+					<responses>
+						<location-response defaultToCurrent="true" mandatory="true">
+							<value />
+						</location-response>
+					</responses>
+				</question>
+				<question sequence="3">
+					<text>Type</text>
+					<responses>
+						<choice-response allowMultiple="true" mandatory="true">
+							<choices>
+								<choice>Vessel</choice>
+								<choice>Fisher</choice>
+								<choice>Vehicle</choice>
+								<choice>Educational</choice>
+							</choices>
+							<value />
+						</choice-response>
+					</responses>
+				</question>
+				<question sequence="4">
+					<text>No. Fishers</text>
+					<responses>
+						<number-response mandatory="false">
+							<value />
+						</number-response>
+					</responses>
+				</question>
+				<question sequence="5">
+					<text>No. In Breach</text>
+					<responses>
+						<number-response mandatory="false">
+							<value />
+						</number-response>
+					</responses>
+				</question>
+			</questions>
+		</section>
+	</sections>
+</checklist>
