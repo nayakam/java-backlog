@@ -79,7 +79,7 @@ public class App {
 
         Map hashmap = new HashMap();
         System.out.println("hasmap get:" + hashmap.get(null));
-        System.out.println("hashmap put(null,test):" + hashmap.put(null, "test"));
+        System.out.println("hashmap put(null,example):" + hashmap.put(null, "example"));
         System.out.println("hasmap get:" + hashmap.get(null));
         System.out.println("hasmap put(null,null):" + hashmap.put(null, null));
         System.out.println("hasmap put(null,null):" + hashmap.put(null, null));
@@ -88,7 +88,7 @@ public class App {
         Map hashtable = new Hashtable();
         System.out.println("hashtable get:" + hashmap.get(null));
         //java.lang.NullPointerException
-        //hashtable.put(null, "test");
+        //hashtable.put(null, "example");
 
         ArrayList alist = new ArrayList<Integer>();
         alist.add(4);

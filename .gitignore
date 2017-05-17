@@ -54,7 +54,7 @@ build/
 [Bb]in/
 [Oo]bj/
 
-# MSTest test Results
+# MSTest example Results
 [Tt]est[Rr]esult*/
 [Bb]uild[Ll]og.*
 
@@ -208,7 +208,7 @@ develop-eggs/
 # Installer logs
 pip-log.txt
 
-# Unit test / coverage reports
+# Unit example / coverage reports
 .coverage
 .tox
 

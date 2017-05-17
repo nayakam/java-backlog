@@ -19,7 +19,7 @@ import java.util.Set;
 
  Input for the function is supplied in the format: each number on it's own line (see Sample Input).
 
- If the hidden test cases are failing, consider all edge cases and re-read the question. We hide the tests to gauge your analytical thinking and requirements gathering skills.
+ If the hidden example cases are failing, consider all edge cases and re-read the question. We hide the tests to gauge your analytical thinking and requirements gathering skills.
 
  Sample Input(Plaintext Link)
  6

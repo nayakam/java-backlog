@@ -7,7 +7,7 @@ package com.nayakam.practice;
  * <br> Widening is replacing one primitive type with another primitive type for
  * assignment-compatibility. Boxing is the automatic conversion of a primitive type to a
  * corresponding reference type <br> <br><i> byte --> int</i> (widening) <br> <b>You CANNOT widen
- * then box (int cannot be Long). IS-A test fails when boxing <br> You CAN box then widen (int can
+ * then box (int cannot be Long). IS-A example fails when boxing <br> You CAN box then widen (int can
  * become Object via Integer) </b> Compile will choose widen the argument over boxing and varargs
  */
 class WidenBoxExample1 {

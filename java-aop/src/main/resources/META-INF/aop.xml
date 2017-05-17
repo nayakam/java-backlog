@@ -1,0 +1,6 @@
+<aspectj>
+    <aspects>
+        <aspect name="com.aop.example.BasicAspect"/>
+        <aspect name="com.aop.example.MySimpleTrace"/>
+    </aspects>
+</aspectj>

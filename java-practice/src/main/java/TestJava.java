@@ -12,11 +12,11 @@ import java.util.Map;
 public class TestJava {
 
     public static void main(String[] args) {
-        File testFile = new File("/moved-test-data");
+        File testFile = new File("/moved-example-data");
         System.out.println(testFile.isDirectory());
         System.out.println(testFile.isFile());
 
-        testFile = new File("/test-data/textfile.txt");
+        testFile = new File("/example-data/textfile.txt");
         System.out.println(testFile.isDirectory());
         System.out.println(testFile.isFile());
 

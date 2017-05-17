@@ -17,7 +17,7 @@ import java.util.Arrays;
  *
  * Unit tests will be run on the output, simply return a boolean from the provided method.
  *
- * If the hidden test cases are failing, consider all edge cases and re-read the question. We hide
+ * If the hidden example cases are failing, consider all edge cases and re-read the question. We hide
  * the tests to gauge your analytical thinking and requirements gathering skills.
  *
  * For the sake of this exercise we can assume all inputs will be given in lower case.

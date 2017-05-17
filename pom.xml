@@ -13,6 +13,7 @@
         <module>java-practice</module>
         <module>java-feature</module>
         <module>data-exchange</module>
+        <module>java-aop</module>
     </modules>
 
     <build>
