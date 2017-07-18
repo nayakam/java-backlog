@@ -17,7 +17,7 @@ public class TreeSetExample {
 
         System.out.println("DescendingSet: " + tree.descendingSet());
 
-        // here it test it's sorted, 63 is the last element. see output below
+        // here it example it's sorted, 63 is the last element. see output below
         Iterator<Integer> iterator = tree.iterator();
         System.out.print("Tree set data: ");
 
