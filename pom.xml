@@ -14,6 +14,7 @@
         <module>java-feature</module>
         <module>data-exchange</module>
         <module>java-aop</module>
+        <module>java-unit-testing</module>
     </modules>
 
     <build>
